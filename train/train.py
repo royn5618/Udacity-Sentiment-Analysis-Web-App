@@ -157,12 +157,12 @@ if __name__ == '__main__':
         }
         torch.save(model_info, f)
 
-	# Save the word_dict
+    # Save the word_dict
     word_dict_path = os.path.join(args.model_dir, 'word_dict.pkl')
     with open(word_dict_path, 'wb') as f:
         pickle.dump(model.word_dict, f)
 
-	# Save the model parameters
+    # Save the model parameters
     model_path = os.path.join(args.model_dir, 'model.pth')
     with open(model_path, 'wb') as f:
         torch.save(model.cpu().state_dict(), f)
